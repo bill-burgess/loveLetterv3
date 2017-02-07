@@ -39,7 +39,7 @@ export default class Login extends Component {
 
   successLogin = data => {
     this.props.notifSend({
-      message: 'You\'r logged !',
+      message: 'You\'re logged in!',
       kind: 'success',
       dismissAfter: 2000
     });
@@ -58,8 +58,7 @@ export default class Login extends Component {
         <Helmet title="Login" />
         <h1>Login</h1>
         {!user && <div>
-          <LoginForm onSubmit={this.login} />
-          <p>This will "log you in" as this user, storing the username in the session of the API server.</p>
+          <LoginForm onSubmit={this.login} /><br />
           <FacebookLogin
             appId="635147529978862"
             /* autoLoad={true} */

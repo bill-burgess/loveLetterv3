@@ -2,7 +2,7 @@ import React from 'react';
 import { IndexRoute, Route } from 'react-router';
 import { isLoaded as isAuthLoaded, load as loadAuth } from 'redux/modules/auth';
 import {
-  App, Home,
+  App, Home, Game,
   Register, Login, LoginSuccess, NotFound
 } from 'containers';
 
@@ -35,6 +35,8 @@ export default store => {
     <Route path="/" component={App}>
       {/* Home (main) route */}
       <IndexRoute component={Home} />
+
+      <Route path="game" component={Game} />
 
       {/* Routes requiring login */}
       <Route onEnter={requireLogin}>
