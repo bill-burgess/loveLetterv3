@@ -1,7 +1,9 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 // import config from 'config';
 // import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
+
+// import { PlayerIcons } from '../components';
 
 @connect(
   state => ({
@@ -10,29 +12,32 @@ import { connect } from 'react-redux';
 )
 export default class Game extends Component {
 
-  static propTypes = {
-    online: PropTypes.bool
-  };
+  // static propTypes = {
+  //   online: PropTypes.bool
+  // };
 
   render() {
-    const { targetedPlayer } = this.props;
-    if (targetedPlayer) {
+    // const { targetedPlayer } = this.props;
+    if (true) {
       return (
         <div>
-          <PlayerIcons /><br /><br />
-          <GuessOptions /><br /><br />
-          <HistoryBox /><br /><br />
-          <StartNewGame />
         </div>
       );
     }
     return (
       <div>
-        <PlayerIcons /><br /><br />
-        <PlayerHand /><br /><br />
-        <HistoryBox /><br /><br />
-        <StartNewGame />
       </div>
     );
   }
 }
+
+// <PlayerIcons /><br /><br />
+// <GuessOptions /><br /><br />
+// <HistoryBox /><br /><br />
+// <StartNewGame />
+
+
+// <PlayerIcons /><br /><br />
+// <PlayerHand /><br /><br />
+// <HistoryBox /><br /><br />
+// <StartNewGame />
